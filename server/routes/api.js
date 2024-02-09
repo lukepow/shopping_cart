@@ -127,6 +127,7 @@ router.put("/products/:id", (req, res) => {
 
 router.delete("/products/:id", (req, res, next) => {
   const productId = req.params.id;
+  console.log(productId);
   Product.findByIdAndRemove(productId)
     .then(() => {
       res.json();
